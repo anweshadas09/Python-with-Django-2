@@ -1,10 +1,111 @@
 {% extends 'website/layout.html' %}
 
 {% block title %}
-Contact
+Contact Us - Get In Touch
 {% endblock %}
 
 {% block content %}
-<h1>Contact Page</h1>
-<p>This is the contact page.</p>
+<div class="page-box">
+    <section class="hero-section">
+        <h1>Contact Us</h1>
+        <p class="hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>support@yourstore.com</p>
+                        <p>sales@yourstore.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h3>Phone</h3>
+                        <p>+9 987654321</p>
+                        <p>Mon-Fri: 9AM-6PM</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>Address</h3>
+                        <p>Sector V, <b>Salt Lake, Bidhannagar</b>, Kolkata, West Bengal 700091, India</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🕒</div>
+                    <div class="info-content">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Find Us</h2>
+        <div class="map-placeholder">
+            <div class="map-content">
+                <p>📍 Interactive Map Coming Soon</p>
+                <p>Sector V, Salt Lake, Bidhannagar,
+                   Kolkata, West Bengal 700091, India</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How long does shipping take?</h3>
+                <p>We offer standard shipping (3-5 business days) and express shipping (1-2 business days) depending on your location.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What's your return policy?</h3>
+                <p>We accept returns within 30 days of purchase. Items must be in original condition with tags attached.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer international shipping?</h3>
+                <p>Yes! We ship to most countries worldwide. International shipping rates and delivery times vary by location.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I track my order?</h3>
+                <p>Once your order ships, you'll receive a tracking number via email. You can also check your order status in your account.</p>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}

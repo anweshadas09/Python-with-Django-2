@@ -6,8 +6,9 @@ from django.contrib import admin
 def home(request):
    return render(request, 'index.html')
 def about(request):
-    return HttpResponse("About Us")
+    return render(request, 'newApp/about.html')
+
 def contact(request):
-    return HttpResponse("Contact Us")
+    return render(request, 'newApp/contact.html')
 def services(request):
     return HttpResponse("Services")

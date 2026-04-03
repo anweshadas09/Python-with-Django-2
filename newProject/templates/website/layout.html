@@ -17,6 +17,52 @@
         </ul>
     </nav>
     {% block content %}{% endblock %}
-    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Your Store</h3>
+                <p>Your trusted online shopping destination for quality products at great prices.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'newApp:home' %}">Home</a></li>
+                    <li><a href="{% url 'newApp:about' %}">About Us</a></li>
+                    <li><a href="{% url 'newApp:contact' %}">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="{% url 'newApp:contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Store. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

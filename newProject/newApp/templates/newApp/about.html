@@ -1,10 +1,84 @@
 {%extends 'website/layout.html'%}
+{% load static %}
 
 {% block title %}
-About
+About Us - Your Trusted E-Commerce Store
 {% endblock %}
 
 {% block content %}
-<h1>About Page</h1>
-<p>This is the about page.</p>
+<div class="page-box">
+    <section class="hero-section">
+        <h1>About Our Store</h1>
+        <p class="hero-subtitle">Bringing quality products to your doorstep since 2020</p>
+    </section>
+
+    <section class="story-section">
+        <div class="story-container">
+            <div class="story-text">
+                <h2>Our Story</h2>
+                <p>Founded with a passion for connecting customers with exceptional products, our e-commerce platform has grown from a small startup to a trusted online retailer. We believe in providing not just products, but experiences that enrich your lifestyle.</p>
+                <p>Our journey began when we noticed a gap in the market for high-quality, affordable products that don't compromise on style or functionality. Today, we're proud to serve thousands of satisfied customers worldwide.</p>
+            </div>
+            <div class="story-image">
+                <img src="{% static 'images/about-store.jpg' %}" alt="Our Store" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2>Why Choose Us?</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable shipping to get your orders to you as soon as possible.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💎</div>
+                <h3>Quality Products</h3>
+                <p>We carefully select only the best products from trusted manufacturers.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💬</div>
+                <h3>24/7 Support</h3>
+                <p>Our customer service team is always ready to help with any questions.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🔒</div>
+                <h3>Secure Shopping</h3>
+                <p>Your personal information and payments are always protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">👨‍💼</div>
+                <h3>John Smith</h3>
+                <p>CEO & Founder</p>
+                <p>"Passionate about creating amazing shopping experiences."</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">👩‍💻</div>
+                <h3>Sarah Johnson</h3>
+                <p>Head of Operations</p>
+                <p>"Ensuring every order is perfect from start to finish."</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">👨‍🎨</div>
+                <h3>Mike Davis</h3>
+                <p>Product Curator</p>
+                <p>"Finding the best products to bring you."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Shop?</h2>
+        <p>Discover our amazing collection of products today.</p>
+        <a href="{% url 'newApp:home' %}" class="btn">Start Shopping</a>
+    </section>
+</div>
 {% endblock %}
