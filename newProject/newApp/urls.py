@@ -8,4 +8,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/',views.contact,name='contact'),
     path('product/<int:product_id>/', views.product_detail, name='product_detail'),
+    path('login/', views.LoginView.as_view(template_name='newApp/login.html'), name='login'),
 ]
